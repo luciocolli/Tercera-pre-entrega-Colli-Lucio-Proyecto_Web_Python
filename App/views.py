@@ -85,3 +85,13 @@ def formulario_autores(request):
 
         contexto = {"formulario": mi_formulario}
         return render(request, "form-autor.html", context = contexto)
+
+def buscar_articulo(request):
+    if request.method == "GET":
+        return render(request, "form-busqueda-articulo.html")
+
+    if request.method == "POST":
+        titulo_a_buscar = request.POST["titulo"]
+        resultados_de_busqueda = Articulo.objects.filter(titulo=titulo_a_buscar)
+        contexto = {"resultados": resultados_de_busqueda}
+        return render(request, "result-busqueda-articulo.html", context = contexto)

@@ -4,8 +4,8 @@ from django import forms
 class Articuloform(forms.Form):
 
     titulo = forms.CharField(max_length=30)
-    articulo = forms.CharField(max_length=1000)
-    fecha_de_publicacion = forms.DateField()
+    texto = forms.CharField(max_length=1000)
+    fecha = forms.DateField()
 
 
 class Autorform(forms.Form):
@@ -18,7 +18,7 @@ class Autorform(forms.Form):
 
 class Categoriaform(forms.Form):
     nombre = forms.CharField(max_length=30)
-    fecha_de_creacion = forms.DateField()
+    fecha = forms.DateField()
 
 
     
