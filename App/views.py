@@ -4,7 +4,7 @@ from datetime import datetime
 from multiprocessing import context
 from operator import is_not
 
-from App.forms import Articuloform, Autorform, Categoriaform, Registrousuario
+from App.forms import Articuloform, Autorform, Categoriaform
 from App.models import Articulo, Autor, Categoria 
 from django.http import HttpResponse
 
